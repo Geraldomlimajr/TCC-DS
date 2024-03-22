@@ -1,193 +1,200 @@
-
-
-body{
-
-margin: 0;
-padding: 0;
-background-image:linear-gradient(to bottom,#042E80,#18A551,#67886E);
-background-attachment: fixed;
-}
-
-.main-login{
-    width: 100vw;
-    height: 100vh;  
-    display: flex;
-    justify-content: center;    
-    margin: 0;
-    border: 0;
-    
-    
-
-}
-.center-login{
-    margin: 0;  
-    background-color: #2c8384;
-    padding: 0%;    
-    width: 40vw;
-    height: 100vh;
-    border-radius: 1vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
-    
-  
-
-}
-.center-login>h1{
-    color: white;
-    font-weight: 400;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-style: italic;
-    font-size: 3vw; 
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    
-
-}
-.textfield{
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-
-}
-.textfield>h2{
-    color: white;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
     font-family: sans-serif;
-    font-size: 2vw;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin-top: 6vw;
-    transform: translateY(-220%);
-  
-}
-.card-usuario{
-    color: white;
-    font-family: sans-serif;
-    font-size: 1.6vw;
-    display: flex;
-    flex-direction: column;   
-    justify-content: center;
-    align-items: flex-start;
-    transform: translateY(-100%);
-}
+  }
+  body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background:#172031;
+  transition:0.5s;
+    
+    
+  }
+  body.light .forget{
+    color: #f8f8f8;
+  }
 
-   
-   .card-senha{
-    color: white;
-    font-family: sans-serif;
-    font-size: 1.6vw;
-    display: flex;
-    flex-direction: column;   
-    justify-content: center;
-    align-items: flex-start;
+  body.light{
+    background: #cacaca;
     
 
-   }
-.card-senha>label{
-    
-    color: white;
-    font-family: sans-serif;
-    font-size: 1.6vw;
-    display: flex;
-    flex-direction: column;   
-    justify-content: center;
-    align-items: flex-start;
-    transform: translateY(-300%);
+
+  }
+
+
+  body.light .formulario{
+    background: rgba(5, 185, 59, 0.459);
+  }
+  body.light .btn-entrar{
+    background: #f7fffa ;
+    color: #011408;
 }
 
-   
-.card-usuario>label{
-  
-    color: white;
-    font-family: sans-serif;
-    font-size: 1.6vw;
-    display: flex;    
-    justify-content: flex-start;
-    align-items: center;
-    transform: translateY(-20%);
+body.light .btn-entrar:hover{
+
+    background: #f7f7f7;
+    color: #068017;
+    cursor: pointer;        
+    border: 3px solid #068637;
+}
+
+body.light .cadastro{
+    
+    color: #044e14;
+}
  
-}
-.card-usuario>input{
-    border-radius: 0.5vw;
-    width: 25vw;
-    height: 5.5vh;
-    padding: 0;
-    margin-bottom: 1.0vw;
-    background-color: #dbdbdb;
-    border: none;
-    font-weight: 400;
-    outline: none;
-    transform: translateY(-10%); 
+
+body.light .formulario .card-user input:focus~label,
+   body.light .formulario .card-user input:valid~label{
+        
+        color:#19a34e;
+   }
+  .formulario{  
+    background: rgb(0, 0, 0,.4);
+    border-radius: 10px;
+    width: 400px;
+    padding: 40px;
 
 
-} 
-.card-senha>input{
-    border-radius: 0.5vw;
-    width: 25vw;
-    height: 5.5vh;
-    padding: 0;
-    margin:0 ;
-    margin-bottom: 1.0vw;
-    background-color: #dbdbdb;   
-    border: none; 
-    outline: none;
-    transform: translateY(-220%);
-    
-
-}
-.card-senha>input::placeholder{
-    width: 25vw;
-    height: 5.5vh;
-    color: #a3a1a1;
-    font-size: 1.2vw;
-    
-}
-.card-usuario>input::placeholder{
-    color: #a3a1a1;
-    font-size: 1.2vw;
-}
-.btn-login{
-    width: 20vw;
-    height: 6vh;
-    border: none;
-    border-radius: 1vw;
-    font-size: 1.6vw;
-    font-weight: 600;
-    background-color: #042E80;
-    color: white;
+  }
+   .slider{
+    width: 50px;
+    height: 20px;
+    border: 3px solid #fff ;
+    float: right;
+    border-radius: 20px;
+    position: relative;
     cursor: pointer;
-    margin: 0;
     padding: 0;
-    transform: translateY(-180%);    
+
+  }
+  .indicador{
+    
+    
+    width: 14px;
+    height: 14px;
+    background-color: #a09f9f;
+    border-radius: 50%;
+    transform:scale(.9);
+    
+    position: absolute;
+    left: 0;
+    transition: 0.5s;
+    
+     
+  }
+  .slider.light{
+    border: 3px solid #19a34e ;
+    background-color: #fff;
 
 
-}
-.textfield>h3{
-    color: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
-    font-size: 2vw;
-    transform: translateY(-220%);
-}  
 
-.btn-cadastrar{
-    width: 20vw;
-    height: 6vh;
-    border: none;
-    border-radius: 1vw;
-    font-size: 1.6vw;
-    font-weight: 600;
-    background-color: #24671E;
-    color: white;
-    cursor: pointer;    
-    margin: 0;
-    padding: 0;
-    transform: translateY(-200%)
+  }
+  .slider.light .indicador{
+    left: 30px;
+    background-color: #383737;
+
+  }
+
+  .formulario h2{
+    margin-bottom: 30px;
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+
+  }
+
+  .formulario .card-user{
+
+    position:relative;
+
+  }
+  .formulario .card-user input{
+    width: 100%;
+    padding: 10px 0;
+    outline: none;
+    border:0;
+    background: transparent;
+    border-bottom: 1px solid #ffff;
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
 
 
-}
+    .formulario .card-user label{
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px 0;
+        color: #fff;
+        font-size: 16px;
+        pointer-events: none;
+        transition: .5s
+
+
+
+
+
+
+    }
+    .formulario .card-user input:focus~label,
+    .formulario .card-user input:valid~label{
+        top: -20px;
+        left:0;
+        color:#03e9f4;
+        font-size: 12px;
+    }
+    .forget{
+        font-size: 12px;
+        color: #5b6b8b;
+        float: right;
+
+    }
+
+    .btn-entrar{
+        position:relative;
+        display: inline-block;
+        font-size: 13px;
+        font-weight: 800;
+        padding: 10px 15px;
+        background: #03e9f4;
+        color:#172031;
+        border-radius: 6px;
+        border: none;
+        margin-bottom: 10px ;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        overflow: hidden;
+    }
+    .btn-entrar:hover{
+
+        background: #172031;
+        color: #03e9f4;
+        cursor: pointer;        
+        border: 3px solid #03e9f4;
+    }
+    p{
+        margin-top: 10px;
+        color: #fff;
+        font-size: 14px;
+
+    }
+    .cadastro{
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 600;
+        color: #03e9f4;
+
+    }
+
+    @media (max-width:405px) {
+        .formulario{
+            width: 90%;
+        }
+    }
+    
